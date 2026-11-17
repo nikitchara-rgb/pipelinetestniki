@@ -18,3 +18,15 @@ jobs:
       
       - name: Run tests
         run: ./test.sh
+  
+  info:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: System info
+        run: |
+          echo "OS: $(uname -a)"
+          echo "Disk space:"
+          df -h
+          echo "Memory:"
+          free -h
