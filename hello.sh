@@ -1,4 +1,6 @@
 #!/bin/bash
 
-echo "Broken script!"
-exit 1
+echo "Hello from CI/CD!"
+echo "Current date: $(date)"
+echo "Current user: $(whoami)"
+echo "Fixed version!"
