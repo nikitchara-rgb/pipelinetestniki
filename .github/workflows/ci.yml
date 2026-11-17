@@ -1,0 +1,20 @@
+name: My First CI
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Make scripts executable
+        run: chmod +x hello.sh test.sh
+      
+      - name: Run hello script
+        run: ./hello.sh
+      
+      - name: Run tests
+        run: ./test.sh
